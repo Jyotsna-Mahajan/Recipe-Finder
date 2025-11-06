@@ -20,12 +20,12 @@ It uses the TheMealDB API
 
 🧩 Tech Stack
 
-React.js – Front-end framework
+1. React.js – Front-end framework
 
-Material-UI (MUI) – UI components and icons
+2. Material-UI (MUI) – UI components and icons
 
-JavaScript (ES6)
+3. JavaScript (ES6)
 
-CSS3 – Styling
+4. CSS3 – Styling
 
-TheMealDB API – Public API for recipe data
+5. TheMealDB API – Public API for recipe data
