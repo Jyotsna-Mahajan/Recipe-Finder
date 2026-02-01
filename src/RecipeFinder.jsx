@@ -6,20 +6,23 @@ import FlatwareIcon from "@mui/icons-material/Flatware";
 import { Typography } from "@mui/material";
 
 export default function RecipeFinder() {
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState(null);
   const [hasSearched, setHasSearched] = useState(false);
 
   async function handleSearch(query) {
-    setHasSearched(true); // mark that user has searched
+    
 
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
     try {
       const res = await fetch(url);
       const data = await res.json();
-      setRecipes(data.meals || []);
+      setRecipes(data.meals);
     } catch (err) {
       console.error("Fetch failed", err);
-      setRecipes([]);
+      setRecipes(null);
+    }
+    finally{
+      setHasSearched(true); // mark that user has searched
     }
   }
 
@@ -39,7 +42,7 @@ export default function RecipeFinder() {
       <SearchBox onSearch={handleSearch} />
 
       {/* Show nothing before search, then show message only if search done */}
-      {hasSearched && recipes.length === 0 && (
+      {hasSearched && recipes === null && (
         <Typography
           variant="h6"
           align="center"
@@ -51,7 +54,7 @@ export default function RecipeFinder() {
       )}
 
       {/* Show results only if available */}
-      {recipes.length > 0 &&
+      {recipes &&
         recipes.map((recipe) => (
           <InfoBox key={recipe.idMeal} recipes={recipe} />
         ))}
