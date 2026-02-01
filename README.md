@@ -1,16 +1,31 @@
-# React + Vite
+🍽️ Recipe Finder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React.js web application that lets users search for recipes by name and view their ingredients, category, and detailed cooking instructions.
+It uses the TheMealDB API
+ to fetch real-time recipe data.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔍 Search Recipes by Name – Type any dish name to find matching recipes.
 
-## React Compiler
+📖 View Ingredients & Instructions – Get complete details including category, ingredients, and step-by-step instructions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🖼️ Recipe Images – Displays the meal image fetched from the API.
 
-## Expanding the ESLint configuration
+⚡ Instant Fetching – Results appear quickly using the Fetch API and async/await.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎨 Modern UI – Built with Material-UI (MUI) components for a clean, responsive interface.
+
+⚠️ Error Handling – Shows “No recipes found” message when no result matches your search.
+
+🧩 Tech Stack
+
+1. React.js – Front-end framework
+
+2. Material-UI (MUI) – UI components and icons
+
+3. JavaScript (ES6)
+
+4. CSS3 – Styling
+
+5. TheMealDB API – Public API for recipe data
